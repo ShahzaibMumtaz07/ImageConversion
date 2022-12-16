@@ -252,3 +252,6 @@ ModelManifest.xml
 *.deployment.old
 
 /.idea/
+
+# VScode
+.vscode
