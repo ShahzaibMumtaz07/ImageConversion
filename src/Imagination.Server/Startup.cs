@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using Imagination.Server.Processor;
 
 namespace Imagination
 {
@@ -31,6 +32,7 @@ namespace Imagination
                 .AddSource(Program.Telemetry.Name));
 
             services.AddControllers();
+            services.AddTransient<ImageProcessor, ImageConverter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
